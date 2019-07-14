@@ -183,6 +183,7 @@ void defiComponent::Init() {
   bumpMaxLayer(16);
   numProps_ = 0;
   propsAllocated_ = 2;
+  orient_ = 0;
   names_ = (char**)malloc(sizeof(char*)* 2);
   values_ = (char**)malloc(sizeof(char*)* 2);
   dvalues_ = (double*)malloc(sizeof(double)* 2);
