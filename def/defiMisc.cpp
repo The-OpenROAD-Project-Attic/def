@@ -64,6 +64,7 @@ DEF_ASSIGN_OPERATOR_C( defiPoints ) {
     DEF_COPY_FUNC( numPoints );
     DEF_MALLOC_FUNC( x, int, sizeof(int) * numPoints );
     DEF_MALLOC_FUNC( y, int, sizeof(int) * numPoints );
+    return *this;
 }
 
 

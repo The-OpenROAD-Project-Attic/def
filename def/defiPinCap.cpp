@@ -156,6 +156,7 @@ DEF_ASSIGN_OPERATOR_C( defiPinAntennaModel ) {
     DEF_COPY_FUNC( APinMaxCutCarAllocated_ );
     DEF_MALLOC_FUNC( APinMaxCutCar_, int, sizeof(int) * numAPinMaxCutCar_ );
     DEF_MALLOC_FUNC_FOR_2D_STR( APinMaxCutCarLayer_, numAPinMaxCutCar_ );
+    return *this;
 }
 
 defiPinAntennaModel::~defiPinAntennaModel() {
@@ -579,6 +580,7 @@ DEF_ASSIGN_OPERATOR_C( defiPinPort ) {
     DEF_COPY_FUNC( x_ );
     DEF_COPY_FUNC( y_ );
     DEF_COPY_FUNC( orient_ );
+    return *this;
 }
 
 defiPinPort::~defiPinPort() {
@@ -1247,6 +1249,7 @@ DEF_ASSIGN_OPERATOR_C( defiPin ) {
     DEF_COPY_FUNC( hasGroundSens_ );
     DEF_MALLOC_FUNC( groundSens_, char, sizeof(char) * (strlen(prev.groundSens_) +1));
 
+    return *this;
 }
 
 defiPin::~defiPin() {

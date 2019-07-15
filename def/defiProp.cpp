@@ -79,6 +79,7 @@ DEF_ASSIGN_OPERATOR_C( defiProp ) {
     DEF_COPY_FUNC( left_ );
     DEF_COPY_FUNC( right_ );
     DEF_COPY_FUNC( d_ );
+    return *this;
 }
 
 

@@ -168,6 +168,7 @@ DEF_ASSIGN_OPERATOR_C( defiVia ) {
     DEF_MALLOC_FUNC( rectMask_, int, sizeof(int) * numLayers_);
     DEF_MALLOC_FUNC( polyMask_, int, sizeof(int) * numLayers_);
 
+    return *this;
 }
 
 

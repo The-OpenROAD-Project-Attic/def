@@ -136,6 +136,7 @@ DEF_ASSIGN_OPERATOR_C( defiBlockage ) {
   DEF_COPY_FUNC( polysAllocated_ );
   DEF_MALLOC_FUNC_FOR_2D_POINT ( polygons_, numPolys_ );
 
+  return *this;
 }
 
 defiBlockage::~defiBlockage() {

@@ -277,6 +277,7 @@ DEF_ASSIGN_OPERATOR_C( defiPath ) {
     DEF_COPY_FUNC( deltaY_ );
     DEF_COPY_FUNC( mask_ );
 
+    return *this;
 }
 
 defiPath::~defiPath() {

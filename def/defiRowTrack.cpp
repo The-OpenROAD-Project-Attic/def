@@ -122,6 +122,7 @@ DEF_ASSIGN_OPERATOR_C( defiRow ) {
     DEF_MALLOC_FUNC( propDValues_, double, sizeof(double) * numProps_);
     DEF_MALLOC_FUNC( propTypes_, char, sizeof(char) * numProps_ );
 
+    return *this;
 }
 
 defiRow::~defiRow() {
@@ -484,6 +485,7 @@ DEF_ASSIGN_OPERATOR_C( defiTrack ) {
     DEF_COPY_FUNC( firstTrackMask_ );
     DEF_COPY_FUNC( samemask_ );
 
+    return *this;
 }
 
 defiTrack::~defiTrack() {
@@ -663,6 +665,7 @@ DEF_ASSIGN_OPERATOR_C( defiGcellGrid ) {
     DEF_COPY_FUNC( x_ );
     DEF_COPY_FUNC( xNum_ );
     DEF_COPY_FUNC( xStep_ );
+    return *this;
 }
 
 defiGcellGrid::~defiGcellGrid() {
