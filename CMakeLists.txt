@@ -3,6 +3,8 @@ project(DEF_PARSER
   LANGUAGES CXX 
 )
 
+option(BUILD_SHARED_LIBS "Build a shared library" OFF)
+
 cmake_minimum_required(VERSION 3.1)
 
 set(DEFLIB_HOME ${CMAKE_CURRENT_SOURCE_DIR})
@@ -180,12 +182,19 @@ add_custom_command(
 )
 add_custom_target(DefBisonTarget ALL DEPENDS def/def.tab.cpp)
 
+if(BUILD_SHARED_LIBS)
+  add_library( def SHARED ${DEFLIB_DEF_SRC} )
+  add_library( defzlib SHARED ${DEFLIB_DEFZLIB_SRC} )
 
-add_library( def STATIC ${DEFLIB_DEF_SRC} )
-add_library( defzlib STATIC ${DEFLIB_DEFZLIB_SRC} )
+  add_library( cdef SHARED ${DEFLIB_CDEF_SRC} )
+  add_library( cdefzlib SHARED ${DEFLIB_CDEFZLIB_SRC})
+else()
+  add_library( def STATIC ${DEFLIB_DEF_SRC} )
+  add_library( defzlib STATIC ${DEFLIB_DEFZLIB_SRC} )
 
-add_library( cdef STATIC ${DEFLIB_CDEF_SRC} )
-add_library( cdefzlib STATIC ${DEFLIB_CDEFZLIB_SRC})
+  add_library( cdef STATIC ${DEFLIB_CDEF_SRC} )
+  add_library( cdefzlib STATIC ${DEFLIB_CDEFZLIB_SRC})
+endif()
 
 
 set_target_properties( def
