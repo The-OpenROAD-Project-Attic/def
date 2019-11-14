@@ -103,6 +103,7 @@ DEF_COPY_CONSTRUCTOR_C( defiBlockage ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiBlockage ) {
+  CHECK_SELF_ASSIGN
   this->Init();
   DEF_COPY_FUNC( hasLayer_ );
   DEF_MALLOC_FUNC( layerName_, char, sizeof(char) * 
@@ -135,7 +136,7 @@ DEF_ASSIGN_OPERATOR_C( defiBlockage ) {
   DEF_COPY_FUNC( numPolys_ );
   DEF_COPY_FUNC( polysAllocated_ );
   DEF_MALLOC_FUNC_FOR_2D_POINT ( polygons_, numPolys_ );
-
+  return *this;
 }
 
 defiBlockage::~defiBlockage() {

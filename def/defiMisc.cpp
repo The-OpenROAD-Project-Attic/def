@@ -61,9 +61,11 @@ DEF_COPY_CONSTRUCTOR_C( defiPoints )
 }
 
 DEF_ASSIGN_OPERATOR_C( defiPoints ) {
+    CHECK_SELF_ASSIGN
     DEF_COPY_FUNC( numPoints );
     DEF_MALLOC_FUNC( x, int, sizeof(int) * numPoints );
     DEF_MALLOC_FUNC( y, int, sizeof(int) * numPoints );
+    return *this;
 }
 
 
