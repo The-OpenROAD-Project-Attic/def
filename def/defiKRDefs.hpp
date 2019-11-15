@@ -49,6 +49,12 @@
 
 #define DEF_ASSIGN_OPERATOR_H(cname) cname& operator=(const cname & prev)
 #define DEF_ASSIGN_OPERATOR_C(cname) cname& cname::operator=(const cname & prev)
+#define CHECK_SELF_ASSIGN                                               \
+{                                                                       \
+    if (this == &prev) {                                                \
+        return *this;                                                   \
+    }                                                                   \
+}
 
 #define DEF_COPY_FUNC(varname) {(varname) = prev.varname;}
 #define DEF_MALLOC_FUNC(varname, vartype, length)                       \

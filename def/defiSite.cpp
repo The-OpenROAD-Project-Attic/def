@@ -209,6 +209,7 @@ DEF_COPY_CONSTRUCTOR_C( defiBox ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiBox ) {
+    CHECK_SELF_ASSIGN
     this->Init();
    
     DEF_COPY_FUNC( xl_ );
@@ -217,6 +218,7 @@ DEF_ASSIGN_OPERATOR_C( defiBox ) {
     DEF_COPY_FUNC( yh_ );
     
     DEF_MALLOC_FUNC_WITH_OPERATOR( points_, defiPoints, sizeof(defiPoints)*1 );
+    return *this;
 }
 
 defiBox::~defiBox() {

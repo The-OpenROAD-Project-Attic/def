@@ -101,6 +101,7 @@ DEF_COPY_CONSTRUCTOR_C( defiRow ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiRow ) {
+    CHECK_SELF_ASSIGN
   this->Init();
     DEF_COPY_FUNC( nameLength_ );
     DEF_MALLOC_FUNC( name_, char, sizeof(char) * (strlen(prev.name_) +1));
@@ -121,7 +122,7 @@ DEF_ASSIGN_OPERATOR_C( defiRow ) {
     DEF_MALLOC_FUNC_FOR_2D_STR( propValues_, numProps_);
     DEF_MALLOC_FUNC( propDValues_, double, sizeof(double) * numProps_);
     DEF_MALLOC_FUNC( propTypes_, char, sizeof(char) * numProps_ );
-
+    return *this;
 }
 
 defiRow::~defiRow() {
@@ -472,6 +473,7 @@ DEF_COPY_CONSTRUCTOR_C( defiTrack ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiTrack ) {
+    CHECK_SELF_ASSIGN
     this->Init();
     DEF_COPY_FUNC( macroLength_ );
     DEF_MALLOC_FUNC( macro_, char, sizeof(char) * (strlen(prev.macro_) +1));
@@ -483,7 +485,7 @@ DEF_ASSIGN_OPERATOR_C( defiTrack ) {
     DEF_MALLOC_FUNC_FOR_2D_STR( layers_, numLayers_ );
     DEF_COPY_FUNC( firstTrackMask_ );
     DEF_COPY_FUNC( samemask_ );
-
+    return *this;
 }
 
 defiTrack::~defiTrack() {
@@ -657,12 +659,14 @@ DEF_COPY_CONSTRUCTOR_C( defiGcellGrid ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiGcellGrid ) {
+    CHECK_SELF_ASSIGN
     this->Init();
     DEF_COPY_FUNC( macroLength_ );
     DEF_MALLOC_FUNC( macro_, char, sizeof(char) * (strlen(prev.macro_) +1));
     DEF_COPY_FUNC( x_ );
     DEF_COPY_FUNC( xNum_ );
     DEF_COPY_FUNC( xStep_ );
+    return *this;
 }
 
 defiGcellGrid::~defiGcellGrid() {

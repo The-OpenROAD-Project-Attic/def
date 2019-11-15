@@ -134,6 +134,7 @@ DEF_COPY_CONSTRUCTOR_C( defiPinAntennaModel ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiPinAntennaModel ) {
+    CHECK_SELF_ASSIGN
     this->Init();
     
     DEF_MALLOC_FUNC( oxide_, char, sizeof(char) * (strlen(prev.oxide_) +1));
@@ -156,6 +157,7 @@ DEF_ASSIGN_OPERATOR_C( defiPinAntennaModel ) {
     DEF_COPY_FUNC( APinMaxCutCarAllocated_ );
     DEF_MALLOC_FUNC( APinMaxCutCar_, int, sizeof(int) * numAPinMaxCutCar_ );
     DEF_MALLOC_FUNC_FOR_2D_STR( APinMaxCutCarLayer_, numAPinMaxCutCar_ );
+    return *this;
 }
 
 defiPinAntennaModel::~defiPinAntennaModel() {
@@ -545,6 +547,7 @@ DEF_COPY_CONSTRUCTOR_C( defiPinPort ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiPinPort ) {
+    CHECK_SELF_ASSIGN
     this->Init();
 
     DEF_COPY_FUNC( layersAllocated_ );
@@ -579,6 +582,7 @@ DEF_ASSIGN_OPERATOR_C( defiPinPort ) {
     DEF_COPY_FUNC( x_ );
     DEF_COPY_FUNC( y_ );
     DEF_COPY_FUNC( orient_ );
+    return *this;
 }
 
 defiPinPort::~defiPinPort() {
@@ -1162,6 +1166,7 @@ DEF_COPY_CONSTRUCTOR_C( defiPin ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiPin ) {
+    CHECK_SELF_ASSIGN
     this->Init();
     DEF_COPY_FUNC( pinNameLength_ );
     DEF_MALLOC_FUNC( pinName_, char, sizeof(char) * (strlen(prev.pinName_) +1));
@@ -1246,7 +1251,7 @@ DEF_ASSIGN_OPERATOR_C( defiPin ) {
     DEF_COPY_FUNC( groundSensLength_ );
     DEF_COPY_FUNC( hasGroundSens_ );
     DEF_MALLOC_FUNC( groundSens_, char, sizeof(char) * (strlen(prev.groundSens_) +1));
-
+    return *this;
 }
 
 defiPin::~defiPin() {

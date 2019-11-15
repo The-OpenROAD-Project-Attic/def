@@ -114,6 +114,7 @@ DEF_COPY_CONSTRUCTOR_C( defiWire ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiWire ) {
+    CHECK_SELF_ASSIGN
     type_ = 0;
     wireShieldName_ = 0;
 
@@ -143,6 +144,8 @@ DEF_ASSIGN_OPERATOR_C( defiWire ) {
     else {
         paths_ = 0; 
     }
+
+    return *this;
 }
 
 
@@ -325,6 +328,7 @@ DEF_COPY_CONSTRUCTOR_C( defiSubnet ) {
 
 
 DEF_ASSIGN_OPERATOR_C( defiSubnet ) {
+    CHECK_SELF_ASSIGN
     defData = NULL;
     this->Init();
 
@@ -349,7 +353,7 @@ DEF_ASSIGN_OPERATOR_C( defiSubnet ) {
     DEF_COPY_FUNC( wiresAllocated_ );
     DEF_MALLOC_FUNC_FOR_2D( wires_, defiWire, numWires_, 1 );
     DEF_MALLOC_FUNC( nonDefaultRule_, char, sizeof(char) * (strlen(prev.nonDefaultRule_) +1));
-
+    return *this;
 }
 
 void defiSubnet::Destroy() {
@@ -781,6 +785,7 @@ DEF_COPY_CONSTRUCTOR_C( defiVpin ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiVpin ) {
+    CHECK_SELF_ASSIGN
     defData = NULL;
 
     DEF_COPY_FUNC( xl_ );
@@ -793,7 +798,7 @@ DEF_ASSIGN_OPERATOR_C( defiVpin ) {
     DEF_COPY_FUNC( yLoc_ );
     DEF_MALLOC_FUNC( name_, char, sizeof(char) * (strlen(prev.name_) +1));
     DEF_MALLOC_FUNC( layer_, char, sizeof(char) * (strlen(prev.layer_) +1));
-
+    return *this;
 }
 
 void defiVpin::Destroy() {
@@ -924,12 +929,14 @@ DEF_COPY_CONSTRUCTOR_C( defiShield ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiShield ) {
+    CHECK_SELF_ASSIGN
     defData = NULL;
 
     DEF_MALLOC_FUNC( name_, char, sizeof(char) * (strlen(prev.name_) +1));
     DEF_COPY_FUNC( numPaths_ );
     DEF_COPY_FUNC( pathsAllocated_ );
     DEF_MALLOC_FUNC_FOR_2D( paths_, defiPath, numPaths_, 1 );
+    return *this;
 }
 
 void defiShield::Destroy() {
@@ -1279,7 +1286,7 @@ DEF_COPY_CONSTRUCTOR_C( defiNet ){
 
 
 DEF_ASSIGN_OPERATOR_C( defiNet ) {
-    
+    CHECK_SELF_ASSIGN
     DEF_COPY_FUNC(defData) ;
     this->Init();
 
@@ -1410,7 +1417,7 @@ DEF_ASSIGN_OPERATOR_C( defiNet ) {
     DEF_MALLOC_FUNC_FOR_2D_STR( viaRouteStatus_, numPts_ ); 
     DEF_MALLOC_FUNC_FOR_2D_STR( viaRouteStatusShieldNames_, numPts_ ); 
     DEF_MALLOC_FUNC_FOR_2D_STR( viaShapeTypes_, numPts_ ); 
-
+    return *this;
 }
 
 void defiNet::Destroy() {

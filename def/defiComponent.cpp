@@ -63,12 +63,14 @@ DEF_COPY_CONSTRUCTOR_C( defiComponentMaskShiftLayer ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiComponentMaskShiftLayer ) {
+    CHECK_SELF_ASSIGN
     layersAllocated_ = 0;
     numLayers_ = 0;
     layers_ = 0;
     DEF_COPY_FUNC( layersAllocated_ );
     DEF_COPY_FUNC( numLayers_ );
     DEF_MALLOC_FUNC_FOR_2D_STR( layers_ , numLayers_ );
+    return *this;
 }
 
 defiComponentMaskShiftLayer::~defiComponentMaskShiftLayer() {

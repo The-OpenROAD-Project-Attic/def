@@ -67,6 +67,7 @@ DEF_COPY_CONSTRUCTOR_C( defiProp ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiProp ) {
+    CHECK_SELF_ASSIGN
     DEF_MALLOC_FUNC( propType_, char, sizeof(char) * (strlen(prev.propType_) +1));
     DEF_MALLOC_FUNC( propName_, char, sizeof(char) * (strlen(prev.propName_) +1));
     DEF_COPY_FUNC( nameSize_ );
@@ -79,6 +80,7 @@ DEF_ASSIGN_OPERATOR_C( defiProp ) {
     DEF_COPY_FUNC( left_ );
     DEF_COPY_FUNC( right_ );
     DEF_COPY_FUNC( d_ );
+    return *this;
 }
 
 

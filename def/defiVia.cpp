@@ -112,7 +112,7 @@ DEF_COPY_CONSTRUCTOR_C( defiVia ) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiVia ) {
-    
+    CHECK_SELF_ASSIGN
     DEF_COPY_FUNC( defData );
     Init();
 
@@ -167,7 +167,7 @@ DEF_ASSIGN_OPERATOR_C( defiVia ) {
     DEF_COPY_FUNC( hasCutPattern_ );
     DEF_MALLOC_FUNC( rectMask_, int, sizeof(int) * numLayers_);
     DEF_MALLOC_FUNC( polyMask_, int, sizeof(int) * numLayers_);
-
+    return *this;
 }
 
 

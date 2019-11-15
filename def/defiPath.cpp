@@ -170,7 +170,7 @@ mask_(0) {
 }
 
 DEF_ASSIGN_OPERATOR_C( defiPath ) {
-
+    CHECK_SELF_ASSIGN
     this->defData = prev.defData;
     this->keys_ = NULL;
     this->data_ = NULL;
@@ -276,7 +276,7 @@ DEF_ASSIGN_OPERATOR_C( defiPath ) {
     DEF_COPY_FUNC( deltaX_ );
     DEF_COPY_FUNC( deltaY_ );
     DEF_COPY_FUNC( mask_ );
-
+    return *this;
 }
 
 defiPath::~defiPath() {
