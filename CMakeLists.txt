@@ -193,6 +193,8 @@ set_target_properties( def
   ARCHIVE_OUTPUT_DIRECTORY ${DEFLIB_HOME}/lib
   LIBRARY_OUTPUT_DIRECTORY ${DEFLIB_HOME}/lib
   RUNTIME_OUTPUT_DIRECTORY ${DEFLIB_HOME}/lib
+  # python regression requirement (gag me) -cherry
+  POSITION_INDEPENDENT_CODE ON
 )
 
 set_target_properties( defzlib
@@ -200,6 +202,8 @@ set_target_properties( defzlib
   ARCHIVE_OUTPUT_DIRECTORY ${DEFLIB_HOME}/lib
   LIBRARY_OUTPUT_DIRECTORY ${DEFLIB_HOME}/lib
   RUNTIME_OUTPUT_DIRECTORY ${DEFLIB_HOME}/lib
+  # python regression requirement (gag me) -cherry
+  POSITION_INDEPENDENT_CODE ON
 )
 
 set_target_properties( cdef
