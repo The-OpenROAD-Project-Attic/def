@@ -36,7 +36,7 @@
 BEGIN_LEFDEF_PARSER_NAMESPACE
 
 defiProp::defiProp(defrData *data)
-: defData(data), propType_(0), propName_(0), stringData_(0) 
+: propType_(0), propName_(0), stringData_(0), defData(data)
 {
   Init();
 }

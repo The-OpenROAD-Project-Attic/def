@@ -46,6 +46,7 @@ defrSettings::defrSettings()
   FillWarnings(999),
   GcellGridWarnings(999),
   IOTimingWarnings(999),
+  LogFileAppend(0),
   NetWarnings(999),
   NonDefaultWarnings(999),
   PinExtWarnings(999),
@@ -61,13 +62,12 @@ defrSettings::defrSettings()
   ViaWarnings(999),
   nDDMsgs(0),
   disableDMsgs(NULL),
-  reader_case_sensitive_set(0),
   totalDefMsgLimit(0),
   AddPathToNet(0),
   AllowComponentNets(0),
   CommentChar('#'),
   DisPropStrProcess(0),
-  LogFileAppend(0),
+  reader_case_sensitive_set(0),
   ReadFunction(NULL),
   ErrorLogFunction(NULL),
   WarningLogFunction(NULL),
@@ -334,8 +334,8 @@ defrSettings::init_symbol_table()
 }
 
 defrSession::defrSession() 
-: reader_case_sensitive(0),
-  FileName(0),
+: FileName(0),
+  reader_case_sensitive(0),
   UserData(NULL)
 {
 }

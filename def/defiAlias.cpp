@@ -40,8 +40,8 @@ public:
 }; 
 
 defiAlias_itr::defiAlias_itr(defrData *data) 
-: first(1),
-  iterator(NULL),
+: iterator(NULL),
+  first(1),
   defData(data ? data : defContext.data)
 {
     defiAlias_itr::Init();
