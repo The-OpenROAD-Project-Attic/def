@@ -194,7 +194,7 @@ int defiSlot::numRectangles() const {
 
 
 int defiSlot::xl(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numRectangles_) {
      sprintf (msg, "ERROR (DEFPARS-6160): The index number %d specified for the SLOT RECTANGLE is invalid.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numRectangles_);
@@ -206,7 +206,7 @@ int defiSlot::xl(int index) const {
 
 
 int defiSlot::yl(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numRectangles_) {
      sprintf (msg, "ERROR (DEFPARS-6160): The index number %d specified for the SLOT RECTANGLE is invalid.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numRectangles_);
@@ -218,7 +218,7 @@ int defiSlot::yl(int index) const {
 
 
 int defiSlot::xh(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numRectangles_) {
      sprintf (msg, "ERROR (DEFPARS-6160): The index number %d specified for the SLOT RECTANGLE is invalid.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numRectangles_);
@@ -230,7 +230,7 @@ int defiSlot::xh(int index) const {
 
 
 int defiSlot::yh(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numRectangles_) {
      sprintf (msg, "ERROR (DEFPARS-6160): The index number %d specified for the SLOT RECTANGLE is invalid.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numRectangles_);

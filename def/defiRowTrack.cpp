@@ -290,7 +290,7 @@ int defiRow::numProps() const {
 
 
 const char* defiRow::propName(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6140): The index number %d specified for the VIA LAYER RECTANGLE is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numProps_);
@@ -302,7 +302,7 @@ const char* defiRow::propName(int index) const {
 
 
 const char* defiRow::propValue(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6140): The index number %d specified for the VIA LAYER RECTANGLE is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numProps_);
@@ -313,7 +313,7 @@ const char* defiRow::propValue(int index) const {
 }
 
 double defiRow::propNumber(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6140): The index number %d specified for the VIA LAYER RECTANGLE is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numProps_);
@@ -324,7 +324,7 @@ double defiRow::propNumber(int index) const {
 }
 
 const char defiRow::propType(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6140): The index number %d specified for the VIA LAYER RECTANGLE is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numProps_);
@@ -335,7 +335,7 @@ const char defiRow::propType(int index) const {
 }
 
 int defiRow::propIsNumber(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6140): The index number %d specified for the VIA LAYER RECTANGLE is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numProps_);
@@ -346,7 +346,7 @@ int defiRow::propIsNumber(int index) const {
 }
 
 int defiRow::propIsString(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6140): The index number %d specified for the VIA LAYER RECTANGLE is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
               index, numProps_);

@@ -1676,7 +1676,7 @@ void defiNet::changeNetName(const char* name) {
 
 void defiNet::changeInstance(const char* instance, int index) {
   int len;
-  char errMsg[128];
+  char errMsg[256];
 
   if ((index < 0) || (index > numPins_)) {
      sprintf (errMsg, "ERROR (DEFPARS-6083): The index number %d specified for the NET INSTANCE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
@@ -1694,7 +1694,7 @@ void defiNet::changeInstance(const char* instance, int index) {
 
 void defiNet::changePin(const char* pin, int index) {
   int len;
-  char errMsg[128];
+  char errMsg[256];
 
   if ((index < 0) || (index > numPins_)) {
      sprintf (errMsg, "ERROR (DEFPARS-6084): The index number %d specified for the NET PIN is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
@@ -2985,7 +2985,7 @@ int defiNet::numPolygons() const {
 
 // 5.6
 const char* defiNet::polygonName(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index > numPolys_) {
      sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numPolys_);
@@ -2996,7 +2996,7 @@ const char* defiNet::polygonName(int index) const {
 }
 
 const char* defiNet::polyRouteStatus(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index > numPolys_) {
      sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numPolys_);
@@ -3007,7 +3007,7 @@ const char* defiNet::polyRouteStatus(int index) const {
 }
 
 const char* defiNet::polyRouteStatusShieldName(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numPolys_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPolys_);
@@ -3018,7 +3018,7 @@ const char* defiNet::polyRouteStatusShieldName(int index) const {
 }
 
 const char* defiNet::polyShapeType(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index > numPolys_) {
      sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numPolys_);
@@ -3029,7 +3029,7 @@ const char* defiNet::polyShapeType(int index) const {
 }
 
 int defiNet::polyMask(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index > numPolys_) {
      sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numPolys_);
@@ -3135,7 +3135,7 @@ int defiNet::numRectangles() const {
 
 // 5.6
 const char* defiNet::rectName(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index > numRects_) {
      sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numRects_);
@@ -3146,7 +3146,7 @@ const char* defiNet::rectName(int index) const {
 }
 
 const char* defiNet::rectRouteStatus(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index > numRects_) {
      sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numRects_);
@@ -3157,7 +3157,7 @@ const char* defiNet::rectRouteStatus(int index) const {
 }
 
 const char* defiNet::rectRouteStatusShieldName(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numRects_) {
         sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numRects_);
@@ -3168,7 +3168,7 @@ const char* defiNet::rectRouteStatusShieldName(int index) const {
 }
 
 const char* defiNet::rectShapeType(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index > numRects_) {
      sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numRects_);
@@ -3180,7 +3180,7 @@ const char* defiNet::rectShapeType(int index) const {
 
 // 5.6
 int defiNet::xl(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index >= numRects_) {
      sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numRects_);
@@ -3192,7 +3192,7 @@ int defiNet::xl(int index) const {
 
 // 5.6
 int defiNet::yl(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index >= numRects_) {
      sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numRects_);
@@ -3204,7 +3204,7 @@ int defiNet::yl(int index) const {
 
 // 5.6
 int defiNet::xh(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index >= numRects_) {
      sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numRects_);
@@ -3216,7 +3216,7 @@ int defiNet::xh(int index) const {
 
 // 5.6
 int defiNet::yh(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index >= numRects_) {
      sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numRects_);
@@ -3227,7 +3227,7 @@ int defiNet::yh(int index) const {
 }
 
 int defiNet::rectMask(int index) const {
-  char errMsg[128];
+  char errMsg[256];
   if (index < 0 || index >= numRects_) {
      sprintf (errMsg, "ERROR (DEFPARS-6086): The index number %d specified for the NET RECTANGLE is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numRects_);
@@ -3325,7 +3325,7 @@ int defiNet::numViaSpecs() const {
 }
 
 const char* defiNet::viaName(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPts_);
@@ -3336,7 +3336,7 @@ const char* defiNet::viaName(int index) const {
 }
 
 const char* defiNet::viaRouteStatus(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPts_);
@@ -3347,7 +3347,7 @@ const char* defiNet::viaRouteStatus(int index) const {
 }
 
 const char* defiNet::viaRouteStatusShieldName(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPts_);
@@ -3358,7 +3358,7 @@ const char* defiNet::viaRouteStatusShieldName(int index) const {
 }
 
 const char* defiNet::viaShapeType(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPts_);
@@ -3369,7 +3369,7 @@ const char* defiNet::viaShapeType(int index) const {
 }
 
 const int defiNet::viaOrient(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPts_);
@@ -3380,7 +3380,7 @@ const int defiNet::viaOrient(int index) const {
 }
 
 const char* defiNet::viaOrientStr(int index) const  {
-    char errMsg[128];
+    char errMsg[256];
 
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
@@ -3392,7 +3392,7 @@ const char* defiNet::viaOrientStr(int index) const  {
 }
 
 const int defiNet::topMaskNum(int index) const {
-   char errMsg[128];
+   char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPts_);
@@ -3404,7 +3404,7 @@ const int defiNet::topMaskNum(int index) const {
 }
 
 const int defiNet::cutMaskNum(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPts_);
@@ -3416,7 +3416,7 @@ const int defiNet::cutMaskNum(int index) const {
 }
 
 const int defiNet::bottomMaskNum(int index) const {
-    char errMsg[128];
+    char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
             index, numPts_);

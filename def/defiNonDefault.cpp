@@ -319,7 +319,7 @@ int defiNonDefault::numLayers() const {
 }
 
 const char* defiNonDefault::layerName(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -331,7 +331,7 @@ const char* defiNonDefault::layerName(int index) const {
 
 // Will be obsoleted in 5.7
 double defiNonDefault::layerWidth(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -342,7 +342,7 @@ double defiNonDefault::layerWidth(int index) const {
 }
 
 int defiNonDefault::layerWidthVal(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -353,7 +353,7 @@ int defiNonDefault::layerWidthVal(int index) const {
 }
 
 int defiNonDefault::hasLayerDiagWidth(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -365,7 +365,7 @@ int defiNonDefault::hasLayerDiagWidth(int index) const {
 
 // Will be obsoleted in 5.7
 double defiNonDefault::layerDiagWidth(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -376,7 +376,7 @@ double defiNonDefault::layerDiagWidth(int index) const {
 }
 
 int defiNonDefault::layerDiagWidthVal(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -387,7 +387,7 @@ int defiNonDefault::layerDiagWidthVal(int index) const {
 }
 
 int defiNonDefault::hasLayerWireExt(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -398,7 +398,7 @@ int defiNonDefault::hasLayerWireExt(int index) const {
 }
 
 int defiNonDefault::hasLayerSpacing(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -410,7 +410,7 @@ int defiNonDefault::hasLayerSpacing(int index) const {
 
 // Will be obsoleted in 5.7
 double defiNonDefault::layerWireExt(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -421,7 +421,7 @@ double defiNonDefault::layerWireExt(int index) const {
 }
 
 int defiNonDefault::layerWireExtVal(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -433,7 +433,7 @@ int defiNonDefault::layerWireExtVal(int index) const {
 
 // Will be obsoleted in 5.7
 double defiNonDefault::layerSpacing(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -444,7 +444,7 @@ double defiNonDefault::layerSpacing(int index) const {
 }
 
 int defiNonDefault::layerSpacingVal(int index) const { 
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numLayers_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -459,7 +459,7 @@ int defiNonDefault::numVias() const {
 }
 
 const char* defiNonDefault::viaName(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numVias_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -474,7 +474,7 @@ int defiNonDefault::numViaRules() const {
 }
 
 const char* defiNonDefault::viaRuleName(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numViaRules_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -489,7 +489,7 @@ int defiNonDefault::numMinCuts() const {
 }
 
 const char* defiNonDefault::cutLayerName(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numMinCuts_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -500,7 +500,7 @@ const char* defiNonDefault::cutLayerName(int index) const {
 }
 
 int defiNonDefault::numCuts(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numMinCuts_) {
      sprintf (msg, "ERROR (DEFPARS-6090): The index number %d specified for the NONDEFAULT LAYER is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numLayers_);
@@ -639,7 +639,7 @@ void defiNonDefault::addNumProperty(const char* name, const double d,
 }
 
 const char* defiNonDefault::propName(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6091): The index number %d specified for the NONDEFAULT PROPERTY is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numProps_);
@@ -650,7 +650,7 @@ const char* defiNonDefault::propName(int index) const {
 }
 
 const char* defiNonDefault::propValue(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6091): The index number %d specified for the NONDEFAULT PROPERTY is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numProps_);
@@ -661,7 +661,7 @@ const char* defiNonDefault::propValue(int index) const {
 }
 
 double defiNonDefault::propNumber(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6091): The index number %d specified for the NONDEFAULT PROPERTY is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numProps_);
@@ -672,7 +672,7 @@ double defiNonDefault::propNumber(int index) const {
 }
 
 const char defiNonDefault::propType(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6091): The index number %d specified for the NONDEFAULT PROPERTY is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numProps_);
@@ -683,7 +683,7 @@ const char defiNonDefault::propType(int index) const {
 }
 
 int defiNonDefault::propIsNumber(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6091): The index number %d specified for the NONDEFAULT PROPERTY is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numProps_);
@@ -694,7 +694,7 @@ int defiNonDefault::propIsNumber(int index) const {
 }
 
 int defiNonDefault::propIsString(int index) const {
-  char msg[160];
+  char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6091): The index number %d specified for the NONDEFAULT PROPERTY is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
              index, numProps_);
