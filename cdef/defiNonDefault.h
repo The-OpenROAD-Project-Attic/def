@@ -44,7 +44,7 @@ EXTERN int defiNonDefault_numProps (const defiNonDefault* obj);
 EXTERN const char* defiNonDefault_propName (const defiNonDefault* obj, int  index);
 EXTERN const char* defiNonDefault_propValue (const defiNonDefault* obj, int  index);
 EXTERN double defiNonDefault_propNumber (const defiNonDefault* obj, int  index);
-EXTERN const char defiNonDefault_propType (const defiNonDefault* obj, int  index);
+EXTERN char defiNonDefault_propType (const defiNonDefault* obj, int  index);
 EXTERN int defiNonDefault_propIsNumber (const defiNonDefault* obj, int  index);
 EXTERN int defiNonDefault_propIsString (const defiNonDefault* obj, int  index);
 

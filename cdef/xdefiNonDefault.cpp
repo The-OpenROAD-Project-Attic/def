@@ -61,7 +61,7 @@ double defiNonDefault_propNumber (const ::defiNonDefault* obj, int  index) {
     return ((LefDefParser::defiNonDefault*)obj)->propNumber(index);
 }
 
-const char defiNonDefault_propType (const ::defiNonDefault* obj, int  index) {
+char defiNonDefault_propType (const ::defiNonDefault* obj, int  index) {
     return ((const LefDefParser::defiNonDefault*)obj)->propType(index);
 }
 
