@@ -305,7 +305,7 @@ double defiRegion::propNumber(int index) const {
 }
 
 
-const char defiRegion::propType(int index) const {
+char defiRegion::propType(int index) const {
   char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6130): The index number %d specified for the REGION PROPERTY is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",

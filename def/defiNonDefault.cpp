@@ -671,7 +671,7 @@ double defiNonDefault::propNumber(int index) const {
   return dvalues_[index];
 }
 
-const char defiNonDefault::propType(int index) const {
+char defiNonDefault::propType(int index) const {
   char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6091): The index number %d specified for the NONDEFAULT PROPERTY is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",

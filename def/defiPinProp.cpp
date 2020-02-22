@@ -261,7 +261,7 @@ double defiPinProp::propNumber(int index) const {
 }
 
 
-const char defiPinProp::propType(int index) const {
+char defiPinProp::propType(int index) const {
   char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6120): The index number %d specified for the PIN PROPERTY is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",

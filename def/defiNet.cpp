@@ -1756,7 +1756,7 @@ double defiNet::propNumber(int index) const {
 }
 
 
-const char defiNet::propType(int index) const {
+char defiNet::propType(int index) const {
   if (index >= 0 &&  index < numProps_)
     return propTypes_[index];
   return 0;
@@ -3368,7 +3368,7 @@ const char* defiNet::viaShapeType(int index) const {
     return viaShapeTypes_[index];
 }
 
-const int defiNet::viaOrient(int index) const {
+int defiNet::viaOrient(int index) const {
     char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
@@ -3391,7 +3391,7 @@ const char* defiNet::viaOrientStr(int index) const  {
     return (defiOrientStr(viaOrients_[index]));
 }
 
-const int defiNet::topMaskNum(int index) const {
+int defiNet::topMaskNum(int index) const {
    char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
@@ -3403,7 +3403,7 @@ const int defiNet::topMaskNum(int index) const {
     return viaMasks_[index] / 100;
 }
 
-const int defiNet::cutMaskNum(int index) const {
+int defiNet::cutMaskNum(int index) const {
     char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",
@@ -3415,7 +3415,7 @@ const int defiNet::cutMaskNum(int index) const {
     return viaMasks_[index] / 10 % 10;
 }
 
-const int defiNet::bottomMaskNum(int index) const {
+int defiNet::bottomMaskNum(int index) const {
     char errMsg[256];
     if (index < 0 || index > numPts_) {
         sprintf (errMsg, "ERROR (DEFPARS-6085): The index number %d specified for the NET POLYGON is invalid.\nValid index is from 0 to %d. Specify a valid index number and then try again.",

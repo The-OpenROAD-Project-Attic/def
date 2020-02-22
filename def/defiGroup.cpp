@@ -326,7 +326,7 @@ double defiGroup::propNumber(int index) const {
 }
 
 
-const char defiGroup::propType(int index) const {
+char defiGroup::propType(int index) const {
   char msg[160];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (LEFPARS-6050): The index number %d given for the GROUP PROPERTY is invalid.\nValid index is from 0 to %d", index, numProps_);

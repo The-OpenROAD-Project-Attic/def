@@ -114,7 +114,7 @@ void defiPropType::bumpProps() {
 }
 
 
-const char defiPropType::propType(char* name) const {
+char defiPropType::propType(char* name) const {
   int i;
 
   // Name is NULL, error

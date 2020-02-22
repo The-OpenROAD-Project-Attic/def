@@ -323,7 +323,7 @@ double defiRow::propNumber(int index) const {
   return propDValues_[index];
 }
 
-const char defiRow::propType(int index) const {
+char defiRow::propType(int index) const {
   char msg[256];
   if (index < 0 || index >= numProps_) {
      sprintf (msg, "ERROR (DEFPARS-6140): The index number %d specified for the VIA LAYER RECTANGLE is invalide.\nValid index number is from 0 to %d. Specify a valid index number and then try again.",
