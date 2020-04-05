@@ -1088,19 +1088,22 @@ defwTracks(const char   *master,
         }
 
         if (sameMask) {
-            fprintf(defwFile, "TRACKS %s %d DO %d STEP %d MASK %d SAMEMASK LAYER",
+            fprintf(defwFile, "TRACKS %s %d DO %d STEP %d MASK %d SAMEMASK",
                     master, do_start, do_cnt, do_step, mask);
         } else {
-            fprintf(defwFile, "TRACKS %s %d DO %d STEP %d MASK %d LAYER",
+            fprintf(defwFile, "TRACKS %s %d DO %d STEP %d MASK %d",
                     master, do_start, do_cnt, do_step, mask);
         }
     } else {
-        fprintf(defwFile, "TRACKS %s %d DO %d STEP %d LAYER",
+        fprintf(defwFile, "TRACKS %s %d DO %d STEP %d",
                 master, do_start, do_cnt, do_step);
     }
 
-    for (i = 0; i < num_layers; i++) {
-        fprintf(defwFile, " %s", layers[i]);
+    if (num_layers > 0) {
+        fprintf(defwFile, " LAYER");
+        for (i = 0; i < num_layers; i++) {
+            fprintf(defwFile, " %s", layers[i]);
+        }
     }
     fprintf(defwFile, " ;\n");
     defwLines++;
